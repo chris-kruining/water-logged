@@ -1,4 +1,4 @@
-import { compile } from './dist';
+import { compile } from './dist/index.mjs';
 
 await compile([ 'esm', 'cjs' ], {
     entryPoints: [ './src/index.ts' ],
