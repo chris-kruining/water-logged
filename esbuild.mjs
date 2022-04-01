@@ -1,4 +1,4 @@
-import { compile } from '@kruining/waterlogged';
+import { compile } from './dist';
 
 await compile([ 'esm', 'cjs' ], {
     entryPoints: [ './src/index.ts' ],

@@ -1,0 +1,5 @@
+import{build as $}from"esbuild";const a=l=>({esm:"mjs",cjs:"cjs",iife:"js"})[l],p="\x1B[0m",f="\x1B[36m",h="\x1B[32m",x="\x1B[31m";async function E(l,r){let i=[];const g=()=>{let e;return i.push(new Promise(n=>e=n)),i.length===l.length&&Promise.all(i).then(n=>{i=[],B(n)}),e},B=e=>{const[n,u]=e.reduce(([t,o],{start:c,end:d})=>[Math.min(t,c),Math.max(o,d)],[1/0,0]),s=e.map(({format:t,start:o,end:c,result:d})=>{const m=d.errors.length===0;return`${m?h:x}${m?"\u2713":"\u26A0"} '${t}'(${Math.round(c-o)}ms)${p}`}).join(`
+`);console.log(`${f}\u{1F30A} Finished build (${Math.round(u-n)}ms total)
+${s}${p}
+`)};return Promise.all(l.map(e=>$({...r,format:e,outfile:r.outfile?.replaceAll(/\$formatExtension/g,a(e)).replaceAll(/\$format/g,e),outdir:r.outdir?.replaceAll(/\$formatExtension/g,a(e)).replaceAll(/\$format/g,e),plugins:[...r.plugins??[],{name:"Logger",setup(n){let u=0,s;n.onStart(()=>{u=performance.now(),s=g()}),n.onEnd(t=>{const o=performance.now();s({format:e,start:u,end:o,result:t})})}}]})))}export{E as compile};
+//# sourceMappingURL=index.mjs.map
