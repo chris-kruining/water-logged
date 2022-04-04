@@ -17,8 +17,8 @@
         "test": "echo \"no tests yet\""
     },
     "devDependencies": {
-        "esbuild": "^0.14.29",
-        "typescript": "^4.6.3"
+        "esbuild": "0.14.29",
+        "typescript": "4.6.3"
     },
     "engines": {
         "node": ">=14"
