@@ -1,7 +1,7 @@
 {
     "name": "@kruining/waterlogged",
     "description": "Simple logger for multiple parallel esbuild formats",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "license": "MIT",
     "exports": {
         "import": "./lib/index.mjs",
