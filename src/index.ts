@@ -59,7 +59,7 @@ export async function compile(formats: Format[], options: Omit<BuildOptions, 'fo
                 const color = isSuccessful ? c.green : c.red;
                 const icon = isSuccessful ? '✓' : '⚠';
 
-                return color`${icon} '${format}'(${Math.round(end - start)}ms)`;
+                return color`${icon} ${format} in ${Math.round(end - start)}ms`;
             })
             .join('\n');
 
